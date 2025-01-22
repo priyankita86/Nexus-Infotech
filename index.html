@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photography Competition Registration</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #f0f4f8, #e0e8f1);
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 60%;
+            margin: 50px auto;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            border-top: 5px solid #4CAF50;
+        }
+        h1 {
+            text-align: center;
+            color: #39ff14;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            font-weight: bold;
+            margin: 10px 0 5px;
+            font-size: 16px;
+            color: #333;
+        }
+        input, select, button {
+            padding: 12px;
+            margin: 8px 0 18px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+        input:focus, select:focus {
+            border-color: #4CAF50;
+            box-shadow: 0 0 8px rgba(76, 175, 80, 0.5);
+            outline: none;
+        }
+        .button-style {
+            display: inline-block;
+            background-color: #4CAF50; /* Green background */
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            text-align: center;
+            text-decoration: none;
+            width: 100%;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-top: 10px;
+        }
+
+        /* Hover effect */
+        .button-style:hover {
+            background-color: #45a049;
+            transform: translateY(-2px);
+        }
+
+        /* Active effect */
+        .button-style:active {
+            background-color: #3e8e41;
+            transform: translateY(1px);
+        }
+
+        /* Focus effect */
+        .button-style:focus {
+            outline: none;
+            box-shadow: 0 0 5px 3px rgba(0, 0, 255, 0.4);
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .footer {
+            text-align: center;
+            font-size: 14px;
+            color: #666;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Nexus Photography Competition</h1>
+        <form action="/submit_registration" method="POST">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="registration">Registration Number:</label>
+                <input type="text" id="registration" name="registration" placeholder="Enter your registration number" required>
+            </div>
+
+            <div class="form-group">
+                <label for="mobile">Mobile Number:</label>
+                <input type="tel" id="mobile" name="mobile" placeholder="Enter your mobile number" pattern="[0-9]{10}" required>
+            </div>
+
+            <div class="form-group">
+                <label for="photo-format">Photo Format:</label>
+                <select id="photo-format" name="photo-format" required>
+                    <option value="" disabled selected>Select your photo format</option>
+                    <option value="monochrome">Monochrome</option>
+                    <option value="portrait">Portrait</option>
+                    <option value="landscape">Landscape</option>
+                    <option value="macro">Macro</option>
+                </select>
+            </div>
+            <a href="res.html" class="button-style">Register</a>
+          
+           
+        </form>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2025 Nexus Photography. All Rights Reserved.</p>
+    </div>
+</body>
+</html>
